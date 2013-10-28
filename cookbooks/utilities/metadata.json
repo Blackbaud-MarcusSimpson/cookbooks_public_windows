@@ -115,6 +115,18 @@
         ],
         "description": "DNS id (from DNS provider) to register for the current public IP",
         "display_name": "DNS id to register"
+      },
+      "utilities/MYNAME": {
+      "required": "required",
+      "calculated": false,
+      "choice": [
+          ],
+      "type": "string",
+          "recipes": [
+      "utilities::cheftutorial"
+          ],
+      "display_name": "Please enter your name",
+      "description": "This is your name"
       }
     },
     "groupings": {
@@ -133,7 +145,8 @@
       "utilities::default": "Not yet implemented",
       "utilities::create_scheduled_task": "Creates the 'rs_scheduled_task' scheduled task under the 'administrator' user. Uses the SCHTASKS Windows command",
       "utilities::change_admin_password": "Changes the administrator password",
-      "utilities::system_shutdown": "Shuts down the system"
+      "utilities::system_shutdown": "Shuts down the system",
+      "utilities::cheftutorial": "Chef Tutorial"
     },
     "maintainer": "RightScale, Inc.",
     "name": "utilities",

@@ -6,6 +6,7 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
 version          "0.3.4"
 
 recipe "utilities::default", "Not yet implemented"
+recipe "utilities::cheftutorial", "Chef Tutorial"
 recipe "utilities::change_admin_password", "Changes the administrator password"
 recipe "utilities::system_reboot", "Reboots the system"
 recipe "utilities::system_shutdown", "Shuts down the system"
@@ -63,3 +64,10 @@ attribute "dns/address_type",
   :recipes => ["utilities::register_dns_name"],
   :required => "optional",
   :default => "public"
+
+attribute "utilities/MYNAME",
+  :display_name => "Please enter your name",
+  :description => "This is your name",
+  :recipes => ["utilities::cheftutorial"],
+  :required => "required"
+
